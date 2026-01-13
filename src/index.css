@@ -1,0 +1,314 @@
+/* =====================
+   RESET
+===================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* =====================
+   THEME FINANCE
+===================== */
+:root {
+  --bg-main: #f4f7fb;
+  --bg-card: #ffffff;
+
+  --sidebar-start: #a3d7ee;
+  --sidebar-end: #b7b4ea;
+
+  --primary: #8ac5db;
+  --primary-hover: #85c6e6;
+
+  --accent: #7ac7ed;
+
+  --text-main: #0f172a;
+  --text-sub: #64748b;
+
+  --border-light: #e5e7eb;
+}
+
+/* =====================
+   BODY
+===================== */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* =====================
+   LAYOUT
+===================== */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   SIDEBAR
+===================== */
+.sidebar {
+  width: 240px;
+  padding: 28px 20px;
+  background: linear-gradient(
+    180deg,
+    var(--sidebar-start),
+    var(--sidebar-end)
+  );
+  color: white;
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  background-color: white;
+  padding: 18px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header h3 {
+  font-size: 20px;
+}
+
+/* =====================
+   USER HEADER
+===================== */
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #eef2ff;
+  color: #5b7fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* =====================
+   USER DROPDOWN
+===================== */
+.user-dropdown {
+  position: absolute;
+  right: 0;
+  top: 52px;
+  width: 220px;
+  background-color: white;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+  z-index: 999;
+}
+
+.user-dropdown .user-email {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 14px;
+  word-break: break-all;
+}
+
+.profile-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #eef2ff;
+  color: #4f46e5;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.profile-btn:hover {
+  opacity: 0.9;
+}
+
+.logout-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fef2f2;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #fee2e2;
+}
+
+/* =====================
+   CONTENT
+===================== */
+.content {
+  padding: 32px;
+  overflow-y: auto;
+}
+
+/* =====================
+   FORM PAGE CENTER
+===================== */
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====================
+   FORM CONTAINER
+===================== */
+.form-container {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 36px 32px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* =====================
+   FORM TITLE
+===================== */
+.form-container h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-sub);
+  margin-bottom: 28px;
+}
+
+/* =====================
+   FORM GROUP
+===================== */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: var(--text-sub);
+  margin-bottom: 6px;
+}
+
+/* =====================
+   INPUT (GỌN – ĐẸP)
+===================== */
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  font-size: 14px;
+  background-color: #f8fafc;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  background-color: white;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(122, 199, 237, 0.15);
+}
+
+/* =====================
+   FORM BUTTON
+===================== */
+.form-btn {
+  width: 100%;
+  height: 44px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    oklch(73.502% 0.11193 227.381)
+  );
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-btn:hover {
+  opacity: 0.95;
+}
+
+/* =====================
+   FORM FOOTER
+===================== */
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.form-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
